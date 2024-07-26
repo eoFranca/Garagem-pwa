@@ -26,5 +26,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <product-list />
+<h1>Bem vindo á Garagem do França</h1>
+<h2>com as melhores peças e carros</h2>
 </template>
