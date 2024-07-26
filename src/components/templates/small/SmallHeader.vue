@@ -1,15 +1,13 @@
 <script setup>
 import { onMounted } from 'vue';
-
 import { PassageUser } from '@passageidentity/passage-elements/passage-user';
-
 import { useAuthStore } from '@/stores/auth';
 
 const authStore = useAuthStore();
 
 </script>
 <template>
-  <header>
+  <header class="cabeca">
     <router-link :to="{ name: 'home' }">Home</router-link> |
     <router-link to="/categorias">Categorias</router-link> |
     <router-link to="/acessorios">Acessorios</router-link> |
@@ -22,7 +20,27 @@ const authStore = useAuthStore();
     <router-link v-else to="/login">Login</router-link>
   </header>
   </template>
-
-  <style>
-
+  
+  <style scoped>
+.cabeca{
+    position: fixed;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 5vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.5s;
+}
+header a:hover{
+color: grey;
+cursor: pointer;
+}
 </style>
